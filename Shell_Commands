@@ -1,0 +1,4 @@
+pip list
+pip install <package>
+pip install <package==x.x.x>
+pip uninstall <package>
