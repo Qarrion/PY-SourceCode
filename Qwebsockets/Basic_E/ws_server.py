@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+# https://websockets.readthedocs.io/en/stable/intro/index.html
+# !/usr/bin/env python
 
 # WS server example
 
