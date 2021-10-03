@@ -2,30 +2,34 @@
 #https://www.daleseo.com/python-logging/
 import logging
 
-#logging.basicConfig(level=logging.DEBUG, format="'%(asctime)s - %(message)s'")
 logging.basicConfig(level=logging.DEBUG)
-# %%
+logging.debug("logging msg")
+
+
+#%%
+import logging
+
+logging.basicConfig(level=logging.DEBUG, format="'%(asctime)s - %(message)s'")
+
 
 def main():
-    logging.debug("test msg")
+    logging.debug("디버그")
+    logging.info("정보")
+    logging.warning("경고")
+    logging.error("오류")
+    logging.critical("심각")
+
+
+if __name__ == "__main__":
+    main()
+
+
 # %%
-main()
-# %%
 
+import logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="'%(asctime)s - %(message)s'"
+    )
+logging.debug("logging with format")
 
-mylogger = logging.getLogger("my")
-mylogger.setLevel(logging.INFO)
-
-formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-stream_hander = logging.StreamHandler()
-stream_hander.setFormatter(formatter)
-mylogger.addHandler(stream_hander)
-
-file_handler = logging.FileHandler('my.log')
-mylogger.addHandler(file_handler)
-
-mylogger.info("server start!!!")
-
-# 출처: https://hamait.tistory.com/880 [HAMA 블로그]
-# %%
