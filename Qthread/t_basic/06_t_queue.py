@@ -2,6 +2,7 @@ from concurrent import futures
 import logging
 import threading
 import time
+import queue
 from concurrent.futures import ThreadPoolExecutor
 
 
@@ -13,7 +14,8 @@ logger.addHandler(console_handler)
 logger.setLevel(logging.INFO)
 
 
-# * https://iredays.tistory.com/125
+"""Producer and Comsumer"""
+
 class data_store_thread:
     # 공유 변수(value)
     def __init__(self):
