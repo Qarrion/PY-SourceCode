@@ -7,3 +7,10 @@ pip uninstall <package>
 pip freeze > requirements.txt
 pip install -r requirements.txt
 pip uninstall -y -r requirements.txt
+
+
+python -m venv .venv
+rm -r .venv
+
+pip install -e LOCAL_LIB
+pip uninstall LOCAL_LIB
